@@ -1,5 +1,3 @@
-from logging import exception
-
 from mysql import connector
 import datetime
 
@@ -43,7 +41,7 @@ class BloodDonorManager:
             #print records
             for data in records:
                 print(data)
-        except exception as e:
+        except Exception as e:
             print(e)
     def retrieve(self,id=None):
         try:
@@ -119,8 +117,8 @@ class BloodDonorManager:
 
 
 # Create object
-donor_instance = BloodDonorManager()
-donor_instance.retrieve(3)
+# donor_instance = BloodDonorManager()
+# donor_instance.retrieve(3)
 
 # # Add donor
 # donor_instance.post(
