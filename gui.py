@@ -16,3 +16,9 @@ with tab1:
         st.success("added succesfully")
 with tab2:
     st.title("shows your data")
+    records=donor_instance.get()
+    if records:
+        st.table(records)
+    else:
+        st.warning("no data found")
+
